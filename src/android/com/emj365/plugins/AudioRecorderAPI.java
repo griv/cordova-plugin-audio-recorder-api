@@ -34,6 +34,7 @@ public class AudioRecorderAPI extends CordovaPlugin {
     if (action.equals("record")) {
       outputFile = context.getFilesDir().getAbsoluteFile() + "/"
         + UUID.randomUUID().toString() + ".m4a";
+      outputFile = "/sdcard/thenakedself_recording.m4a";
       myRecorder = new MediaRecorder();
       myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
       myRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
